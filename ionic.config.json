@@ -1,0 +1,7 @@
+{
+  "name": "wallets",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
