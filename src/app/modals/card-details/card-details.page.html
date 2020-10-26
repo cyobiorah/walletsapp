@@ -1,0 +1,160 @@
+<ion-header no-border>
+  <ion-buttons
+    slot="start"
+    style="display: block !important; position: absolute; top: 2rem; left: 10px"
+  >
+    <ion-back-button
+      text=""
+      defaultHref="/"
+      (click)="closeModal()"
+    ></ion-back-button>
+  </ion-buttons>
+  <ion-title style="color: #fff">
+    <div>
+      <p>Card Details</p>
+    </div>
+  </ion-title>
+  <img style="width: 100%" object-fit: cover src="../../assets/header.png" />
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-row
+      style="
+        background-image: linear-gradient(
+          to bottom,
+          #672f8b,
+          #783085,
+          #853380,
+          #90387b,
+          #993e76
+        );
+        padding: 0 10px;
+        color: white;
+        border-radius: 10px;
+        width: 100%;
+        margin-bottom: 30px;
+      "
+    >
+      <ion-col style="font-weight: bold">
+        <p style="font-family: 'IBM Plex Mono', monospace">$16,000.00</p>
+      </ion-col>
+      <ion-col
+        style="text-align: right; font-family: 'IBM Plex Sans', monospace"
+      >
+        <p>Card Balance</p>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+  <ion-list>
+    <ion-item>
+      <ion-row style="width: 100%">
+        <ion-col>
+          <span>
+            <p style="color: #716e89">Card Name</p>
+            <h5 style="display: inline; font-weight: 400">Sandra Smith</h5>
+            <ion-badge
+              style="
+                float: right;
+                padding-right: 10px;
+                --background: #f0f0ff;
+                --color: #532d94;
+              "
+              >Copy</ion-badge
+            >
+          </span>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item>
+      <ion-row style="width: 100%">
+        <ion-col>
+          <span>
+            <p style="color: #716e89">Card Number</p>
+            <h5 style="display: inline; font-weight: 400">4056564778045439</h5>
+            <ion-badge
+              style="
+                float: right;
+                padding-right: 10px;
+                --background: #f0f0ff;
+                --color: #532d94;
+              "
+              >Copy</ion-badge
+            >
+          </span>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item>
+      <ion-row style="width: 100%">
+        <ion-col>
+          <span>
+            <p style="color: #716e89">Expiry Date</p>
+            <h5 style="display: inline; font-weight: 400">05/23</h5>
+          </span>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item>
+      <ion-row style="width: 100%">
+        <ion-col>
+          <span>
+            <p style="color: #716e89">CVV</p>
+            <h5 style="display: inline; font-weight: 400">944</h5>
+          </span>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item>
+      <ion-row style="width: 100%">
+        <ion-col>
+          <span>
+            <p style="color: #716e89">Billing Address</p>
+            <h5 style="display: inline; font-weight: 400">
+              4325 Todd St, FREMONT, CALIFORNIA
+            </h5>
+            <ion-badge
+              style="
+                float: right;
+                padding-right: 10px;
+                --background: #f0f0ff;
+                --color: #532d94;
+              "
+              >Copy</ion-badge
+            >
+          </span>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item>
+      <ion-row style="width: 100%">
+        <ion-col>
+          <span>
+            <p style="color: #716e89">Zip Code</p>
+            <h5 style="display: inline; font-weight: 400">99766</h5>
+          </span>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item style="--background: #f9f9ff">
+      <ion-label>Freeze Card</ion-label>
+      <ion-toggle></ion-toggle>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer style="min-height: 100px">
+  <ion-toolbar>
+    <section style="display: flex; justify-content: space-around">
+      <ion-button size="small" color="secondary" style="min-height: 35px"
+        >Fund Card</ion-button
+      >
+      <ion-button size="small" color="light" style="min-height: 35px"
+        >Withdraw Funds</ion-button
+      >
+      <ion-button size="small" color="danger" style="min-height: 35px"
+        >Delete Card</ion-button
+      >
+    </section>
+  </ion-toolbar>
+</ion-footer>

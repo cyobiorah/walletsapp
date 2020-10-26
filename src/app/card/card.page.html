@@ -1,0 +1,187 @@
+<ion-header>
+  <ion-toolbar style="padding: 15px">
+    <ion-segment
+      value="dollar"
+      [(ngModel)]="segmentModel"
+      (ionChange)="segmentChanged($event)"
+      style="width: 100%"
+    >
+      <ion-segment-button value="dollar">
+        <ion-label>Dollar Cards</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="naira" disabled>
+        <ion-label>Naira Cards</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content
+  [fullscreen]="true"
+  class="ion-padding"
+  *ngIf="segmentModel === 'dollar'"
+  style="background-color: #ffffff; --padding-start: 0; --padding-end: 0"
+>
+  <ion-grid style="padding: 0 30px">
+    <ion-row>
+      <ion-col>
+        <p style="color: #716e89; font-size: 18px">Card Balance</p>
+        <h2
+          style="
+            display: inline;
+            margin-right: 20px;
+            font-family: 'IBM Plex Mono', monospace;
+          "
+        >
+          $20.00
+        </h2>
+        <ion-icon
+          name="eye-off-outline"
+          size="small"
+          style="position: relative; top: 2px"
+        ></ion-icon>
+      </ion-col>
+      <ion-col style="text-align: right">
+        <button
+          style="
+            padding: 15px;
+            border-radius: 5px;
+            background: #00c9b6;
+            color: #fff;
+            font-size: 16px;
+            margin-top: 1.2rem;
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: 300;
+          "
+        >
+          REQUEST CARD
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-row>
+    <ion-col style="text-align: center; padding: 30px">
+      <img src="../../assets/card.png" style="width: 100%" />
+    </ion-col>
+  </ion-row>
+  <div
+    style="
+      height: 6rem;
+      background: #ececf1;
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      padding: 1.7rem;
+    "
+  >
+    <button
+      (click)="openModal()"
+      style="
+        padding: 15px;
+        min-width: 100%;
+        border-radius: 5px;
+        background: #00c9b6;
+        color: #fff;
+        font-size: 16px;
+        font-family: 'IBM Plex Mono', monospace;
+        font-weight: 600;
+      "
+    >
+      FUND CARD
+    </button>
+  </div>
+  <ion-grid style="padding: 0 30px; margin-bottom: 30px">
+    <ion-row>
+      <ion-col size="8">
+        <p
+          style="
+            color: #181528;
+            font-family: 'IBM Plex Sans', monospace;
+            font-size: 18px;
+          "
+        >
+          Transactions
+        </p>
+      </ion-col>
+      <ion-col style="text-align: right" routerLink="/tablinks/transactions">
+        <p
+          style="
+            color: #532d94;
+            font-family: 'IBM plex Sans', monospace;
+            font-size: 17px;
+            padding-top: 2px;
+          "
+        >
+          See all
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list>
+    <ion-item>
+      <ion-label style="display: inline-flex">
+        <ion-row style="width: 100%">
+          <ion-col size="2">
+            <img src="../../assets/dollcard.png" />
+          </ion-col>
+          <ion-col>
+            <span>
+              <h2 style="font-family: 'IBM plex Sans', monospace">
+                Dollar Card Topup via Wallet
+              </h2>
+              <p
+                style="
+                  display: inline;
+                  font-family: 'IBM Plex Mono', monospace;
+                  color: #716e89;
+                "
+              >
+                $6.00
+              </p>
+              <p style="float: right; padding-right: 10px; color: #716e89">
+                Yesterday
+              </p>
+            </span>
+          </ion-col>
+        </ion-row>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label style="display: inline-flex">
+        <ion-grid>
+          <ion-row style="width: 100%">
+            <ion-col size="2">
+              <img src="../../assets/transfer.png" />
+            </ion-col>
+            <ion-col>
+              <span>
+                <h2 style="font-family: 'IBM plex Sans', monospace">
+                  Transfer Funds to Jane Doe
+                </h2>
+                <p
+                  style="
+                    display: inline;
+                    font-family: 'IBM Plex Mono', monospace;
+                    color: #716e89;
+                  "
+                >
+                  -$2.00
+                </p>
+                <small style="float: right; padding-right: 10px; color: #716e89"
+                  >Jun 16</small
+                >
+              </span>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-content
+  [fullscreen]="true"
+  class="ion-padding"
+  *ngIf="segmentModel === 'naira'"
+>
+  naira card here
+</ion-content>
